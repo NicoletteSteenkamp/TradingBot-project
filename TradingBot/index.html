@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Bot Name] - Your Trading Partner</title>
+  <style>
+
+    html {
+        scroll-behavior: smooth;
+      }
+      
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      header {
+        background: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header nav a {
+        margin: 0 15px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .hero {
+        text-align: center;
+        padding: 50px 20px;
+        background: #f4f4f4;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        color: #4CAF50;
+      }
+      .hero p {
+        margin: 20px 0;
+        font-size: 1.2rem;
+      }
+      .cta-button {
+        background: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 5px;
+      }
+      .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 20px;
+        background: #fff;
+      }
+      .feature-box {
+        width: 30%;
+        text-align: center;
+      }
+      .feature-box h3 {
+        color: #4CAF50;
+      }
+      .pricing {
+        padding: 50px 20px;
+        text-align: center;
+        background: #f4f4f4;
+      }
+      .pricing h2 {
+        color: #4CAF50;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #333;
+        color: white;
+      }
+      footer a {
+        color: #4CAF50;
+        text-decoration: none;
+      }
+
+      header nav a {
+        transition: transform 0.3s ease;
+    }
+    
+    header nav a:hover {
+        transform: scale(1.1);
+        color: #388E3C; /* Optional, change color on hover */
+    }
+    
+
+    /* Add this CSS to your styles section */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .hero h1, .hero p {
+    animation: slideIn 1s ease-out;
+  }
+  
+  .hero h1 {
+    animation-delay: 0.5s; /* Delay the heading animation */
+  }
+  
+  .hero p {
+    animation-delay: 1s; /* Delay the paragraph animation */
+  }
+  
+
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#pricing {
+    animation: fadeInUp 1.5s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s; /* Delay the animation */
+}
+
+
+    .cta-button {
+        background: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      
+      .cta-button:hover {
+        background: #388E3C;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .signup-form {
+        text-align: center;
+        padding: 40px 20px;
+        background: #fff;
+      }
+      
+      .signup-form h2 {
+        color: #4CAF50;
+        margin-bottom: 20px;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      .feature-box {
+        animation: fadeIn 1s ease-out;
+        opacity: 0;
+        animation-fill-mode: forwards;
+      }
+      
+      /* Delay the animations slightly for each feature box */
+      .feature-box:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .feature-box:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .feature-box:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      
+      .signup-form input {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+      
+      .signup-form button {
+        width: 50%;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      
+      .signup-form button:hover {
+        background: #388E3C;
+      }
+      
+      #formMessage {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        color: #388E3C;
+      }
+      
+      .signup-form input:focus {
+        animation: bounce 0.3s ease-in-out;
+        border: 1px solid #4CAF50; /* Highlight the input when focused */
+    }
+    
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        25% { transform: translateY(-5px); }
+        50% { transform: translateY(0); }
+        75% { transform: translateY(-3px); }
+        100% { transform: translateY(0); }
+    }
+    
+
+      @media (max-width: 768px) {
+        header nav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px;
+        }
+      
+        header nav a {
+          margin: 10px 0;
+        }
+      
+        .hero h1 {
+          font-size: 2rem; /* Adjust for smaller screens */
+        }
+      
+        .cta-button {
+          padding: 12px 25px; /* Slightly larger buttons for touch */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .pricing div {
+          display: block;
+          margin-bottom: 20px;
+        }
+      
+        .pricing h3 {
+          font-size: 1.5rem;
+        }
+      
+        .pricing p {
+          font-size: 1rem;
+        }
+      }
+      
+  </style>
+</head>
+<body>
+  <header>
+    <h1>[Bot Name]</h1>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Revolutionize Your Trading with [Bot Name]</h1>
+    <p>Automate your strategies, save time, and maximize profits.</p>
+    <a href="#pricing" class="cta-button">Get Started Now</a>
+  </div>
+
+  <section id="signup" class="signup-form">
+    <h2>Sign Up for Early Access</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="password" id="password" placeholder="Choose a Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <section id="features" class="features">
+    <div class="feature-box">
+      <h3>Customizable Strategies</h3>
+      <p>Tailor strategies to match your goals.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Secure API Integration</h3>
+      <p>Seamlessly connect with major exchanges.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Real-Time Monitoring</h3>
+      <p>Track performance anytime, anywhere.</p>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <h2>Pricing Plans</h2>
+    <p>Choose a plan that suits your trading needs.</p>
+    <div>
+      <h3>Basic: $500</h3>
+      <p>Single strategy, 1 exchange, no customizations.</p>
+      <h3>Pro: $1,500</h3>
+      <p>Multiple strategies, backtesting, email support.</p>
+      <h3>Enterprise: $5,000+</h3>
+      <p>Full customizations, AI/ML optimizations, premium support.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 [Bot Name]. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+      
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+      
+        // Basic validation (can add more detailed checks here)
+        if (name && email && password) {
+          // Simulate a successful sign-up submission (can integrate with backend)
+          document.getElementById('formMessage').textContent = "Thank you for signing up, " + name + "!";
+          document.getElementById('formMessage').style.color = "#388E3C"; // Success message color
+      
+          // Clear form fields
+          document.getElementById('signupForm').reset();
+        } else {
+          document.getElementById('formMessage').textContent = "Please fill in all fields!";
+          document.getElementById('formMessage').style.color = "red"; // Error message color
+        }
+      });
+      
+  </script>
+</body>
+</html>
